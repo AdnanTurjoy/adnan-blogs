@@ -30,6 +30,7 @@ export default function Profile() {
           setName(res.data.name);
           setEmail(res.data.email);
           setBlogs(res.data.blogs);
+         
           setLikedBlogs(res.data.likedBlogs);
           setInterval(() => {
             setLoading(false);
@@ -73,7 +74,23 @@ export default function Profile() {
   const handleEdit = (id) => {
     navigate(`/edit/${id}`);
   };
-
+  //console.log(blogs[0]?.comments.length);
+  let totalLikes=0;
+  const getTotalLikes=()=>{
+    
+    blogs?.map((blog)=>{
+      totalLikes+=blog.likes.length;
+    })
+    return totalLikes;
+  }
+  let totalComments=0;
+  const getTotalComments=()=>{
+    
+    blogs?.map((blog)=>{
+      totalComments+=blog.comments.length;
+    })
+    return totalComments;
+  }
   return (
     <>
       <NavBar />
@@ -89,6 +106,12 @@ export default function Profile() {
                   <div className="user-email">{email}</div>
                   <div className="user-info">
                     Blogs Published: {blogs.length}
+                  </div>
+                  <div className="user-info">
+                    Total Like: {getTotalLikes()}
+                  </div>
+                  <div className="user-info">
+                    Total Comments: {getTotalComments()}
                   </div>
                 </div>
               </div>
