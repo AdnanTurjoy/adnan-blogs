@@ -18,7 +18,7 @@ mongoose.connect(dbUrl, {
 
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
-
+// https://adnan-blog.up.railway.app/
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server started on port 5000");
 });
