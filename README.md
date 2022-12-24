@@ -1,4 +1,4 @@
-# live : https://adnan-blog.web.app/
+# live : https://adnan-blogs.vercel.app/
 
 # Technology
 
