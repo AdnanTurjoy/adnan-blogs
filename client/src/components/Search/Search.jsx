@@ -20,7 +20,7 @@ export default function Search() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://adnan-blog.herokuapp.com/api/user/search/${query}`)
+      .get(`https://adnan-blog.onrender.com/api/user/search/${query}`)
       .then((res) => {
         setBlogs(res.data.blogs);
         setInterval(() => {

@@ -27,7 +27,7 @@ export default function EditPost() {
       navigate("/login");
     }
     axios
-      .get(`https://adnan-blog.herokuapp.com/api/user/post/${id}`)
+      .get(`https://adnan-blog.onrender.com/api/user/post/${id}`)
       .then((res) => {
         setTitle(res.data.blog.title);
         setContent(res.data.blog.content);
@@ -61,7 +61,7 @@ export default function EditPost() {
     formData.append("date", new Date());
     formData.append("token", localStorage.getItem("token"));
     axios
-      .post(`https://adnan-blog.herokuapp.com/api/user/edit`, formData)
+      .post(`https://adnan-blog.onrender.com/api/user/edit`, formData)
       .then((res) => {
         setSubmitting(false);
         navigate("/profile");

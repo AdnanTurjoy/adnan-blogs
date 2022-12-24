@@ -23,7 +23,7 @@ export default function Profile() {
   useEffect(() => {
     if (localStorage.getItem("token")) {
       axios
-        .post(`https://adnan-blog.herokuapp.com/api/user/profile`, {
+        .post(`https://adnan-blog.onrender.com/api/user/profile`, {
           token: localStorage.getItem("token"),
         })
         .then((res) => {
@@ -56,7 +56,7 @@ export default function Profile() {
 
   const handleDelete = (id) => {
     axios
-      .post(`https://adnan-blog.herokuapp.com/api/user/delete`, {
+      .post(`https://adnan-blog.onrender.com/api/user/delete`, {
         token: localStorage.getItem("token"),
         id: id,
       })

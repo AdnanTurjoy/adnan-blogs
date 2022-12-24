@@ -48,7 +48,7 @@ export default function CreatePost() {
     formData.append("token", localStorage.getItem("token"));
     axios({
       method: "post",
-      url: `https://adnan-blog.herokuapp.com/api/user/create`,
+      url: `https://adnan-blog.onrender.com/api/user/create`,
       data: formData,
     })
       .then((res) => {

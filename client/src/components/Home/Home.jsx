@@ -18,7 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get(`https://adnan-blog.herokuapp.com/api/user/posts`)
+      .get(`https://adnan-blog.onrender.com/api/user/posts`)
       .then((res) => {
         setBlogs(res.data.blogs);
         setInterval(() => {

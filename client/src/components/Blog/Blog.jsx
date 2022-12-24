@@ -34,7 +34,7 @@ export default function Blog() {
   useEffect(() => {
     if (localStorage.getItem("token")) {
       axios
-        .post(`https://adnan-blog.herokuapp.com/api/user/data`, {
+        .post(`https://adnan-blog.onrender.com/api/user/data`, {
           token: localStorage.getItem("token"),
         })
         .then((res) => {
@@ -47,7 +47,7 @@ export default function Blog() {
         });
     }
     axios
-      .get(`https://adnan-blog.herokuapp.com/api/user/post/${id}`)
+      .get(`https://adnan-blog.onrender.com/api/user/post/${id}`)
       .then((res) => {
         setBlog(res.data.blog);
         if (loggedIn) {
@@ -73,7 +73,7 @@ export default function Blog() {
     if (loggedIn) {
       if (!liked) {
         axios
-          .post(`https://adnan-blog.herokuapp.com/api/user/post/like/${id}`, {
+          .post(`https://adnan-blog.onrender.com/api/user/post/like/${id}`, {
             user_id: userId,
           })
           .then((res) => {
@@ -92,7 +92,7 @@ export default function Blog() {
       } else {
         axios
           .post(
-            `https://adnan-blog.herokuapp.com/api/user/post/unlike/${id}`,
+            `https://adnan-blog.onrender.com/api/user/post/unlike/${id}`,
             {
               user_id: userId,
             }
@@ -117,7 +117,7 @@ export default function Blog() {
 
   const addComment = (id) => {
     axios
-      .post(`https://adnan-blog.herokuapp.com/api/user/post/comment/${id}`, {
+      .post(`https://adnan-blog.onrender.com/api/user/post/comment/${id}`, {
         user_id: userId,
         comment: document.getElementById("comment").value,
       })

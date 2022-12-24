@@ -46,7 +46,7 @@ export default function Signup() {
     }
 
     axios
-      .post(`https://adnan-blog.herokuapp.com/api/auth/register`, {
+      .post(`https://adnan-blog.onrender.com/api/auth/register`, {
         name,
         email,
         password,

@@ -26,7 +26,7 @@ export default function NavBar() {
     if (localStorage.getItem("token")) {
       setLoggedIn(true);
       axios
-        .post(`https://adnan-blog.herokuapp.com/api/user/data`, {
+        .post(`https://adnan-blog.onrender.com/api/user/data`, {
           token: localStorage.getItem("token"),
         })
         .then((res) => {

@@ -33,7 +33,7 @@ export default function Login() {
     }
 
     axios
-      .post(`https://adnan-blog.herokuapp.com/api/auth/login`, {
+      .post(`https://adnan-blog.onrender.com/api/auth/login`, {
         email,
         password,
       })
